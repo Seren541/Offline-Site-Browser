@@ -6,7 +6,7 @@ class Send:
     def getPage(self):
 
         # Opens file
-        with open('Database.dat', 'r') as file:
+        with open('Websites.database', 'r') as file:
             links = file.read().replace('\n', ' %n ')
         # Makes into array
         links = links.split()

@@ -10,14 +10,14 @@ class Data:
     def add(self):
 
         #Imports database and turns it into an array
-        with open('Database.dat', 'r') as file:
+        with open('Websites.database', 'r') as file:
             db = file.read()
         db = db.split()
 
         # Checks for redundancy. TODO: update sites if already there
         if not self.link in db:
             # Adds the link to the end of the database
-            with open('Database.dat', 'a') as file:
+            with open('Websites.database', 'a') as file:
                 file.write('\n')
                 file.write(self.link)
                 file.write(' ')

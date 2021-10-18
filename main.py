@@ -2,30 +2,12 @@
 # More info in Read.md
 
 print('Would you like to:')
-print('1. Download a website')
-print('2. Update current websites (at the moment skips previous sites)')
-print('3. Access a website')
+print('1. Update current websites (at the moment skips previous sites)')
+print('2. Access a website')
 
 usage = input()
 
 if usage == '1':
-    # Import the downloader
-    from downloader import Download
-
-    # Import file tools
-    import os
-    import os.path
-
-    # Gets the site directory
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    dir_path = dir_path + '\\Sites'
-
-    # Gets the website
-    domainName = input('What is the name of the site you want to scrape (only include the domain): ')
-    d = Download(domainName, dir_path)
-    d.scrape()
-
-elif usage == '2':
     # Import file tools
     import os
     import os.path
@@ -59,7 +41,7 @@ elif usage == '2':
             d = Data(words, dirpath, properPath)
             d.add()
 
-elif usage == '3':
+elif usage == '2':
     # Imports all my classes
     from retriever import Get
     from sender import Send

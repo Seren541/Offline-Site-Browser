@@ -8,7 +8,7 @@ class Get:
     def search(self):
 
         # Reads file
-        with open('Database.dat', 'r') as file:
+        with open('Websites.database', 'r') as file:
             base = file.read().replace('\n', ' %n ')
             base = base.split()
 

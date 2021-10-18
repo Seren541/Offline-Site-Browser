@@ -4,7 +4,7 @@ class Display:
         self.site = site
 
     def run(self):
-        with open('Database.dat', 'r') as file:
+        with open('Websites.database', 'r') as file:
             data = file.read()
         data = data.split()
 
